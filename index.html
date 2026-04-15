@@ -10,11 +10,6 @@
     
 </head>
 
-<div id="imageModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImg">
-    <div class="modal-caption" id="modalCaption"></div>
-</div>
 
 <body>
     <!-- Header & Navigation -->
@@ -30,6 +25,7 @@
                     <li><a href="#about" class="nav-link">Tentang</a></li>
                     <li><a href="#services" class="nav-link">Layanan</a></li>
                     <li><a href="#portfolio" class="nav-link">Portofolio</a></li>
+                    <li><a href="#gallery" class="nav-link">gallery</a></li>
                     <li><a href="#contact" class="nav-link">Kontak</a></li>
                 </ul>
                 <div class="hamburger">
@@ -43,7 +39,7 @@
 
 <!--popup-->>
 
-<a href="https://wa.me/0812345678" class="wa-float" target="_blank">
+<a href="https://wa.me/6281211832929?text=Saya%20tertarik%20dengan%20produk%20Anda,%20apakah%20saya%20bisa%20bertanya%20lebih%20lanjut?" class="wa-float" target="_blank">
     <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
 </a>
 
@@ -64,6 +60,7 @@
             <img src="img/draft 1.jpg" alt="Slide 1">
             <img src="img/draft 2.jpg" alt="Slide 2">
             <img src="img/draft 4.jpg" alt="Slide 3">
+            <img src="img/draft 11.jpg" alt="Slide 4">
         </div>
     </div>
 </div>
@@ -120,11 +117,11 @@
         <div class="container">
             <div class="section-header">
                 <h2>Layanan <span class="highlight">Kami</span></h2>
-                <p>Solusi lengkap untuk kebutuhan Anda</p>
+                <p>Kami menyediakan layanan konstruksi profesional mulai dari perencanaan hingga penyelesaian proyek. Dengan tim berpengalaman dan teknologi modern, kami memastikan setiap proyek berjalan tepat waktu dengan hasil berkualitas tinggi.</p>
             </div>
             <div class="services-grid">
 
-    <div class="service-card" >
+    <div class="service-card" onclick="openBuildingPopup()" >
         <div class="service-icon">
             <i class="fas fa-building"></i>
         </div>
@@ -132,7 +129,7 @@
         <p>Pembangunan gedung dan konstruksi berkualitas tinggi.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card" onclick="openInteriorPopup()" >
         <div class="service-icon">
             <i class="fas fa-couch"></i>
         </div>
@@ -140,7 +137,8 @@
         <p>Desain dan pengerjaan interior modern dan elegan.</p>
     </div>
 
-    <div class="service-card">
+
+    <div class="service-card" onclick="openResidencePopup()">
         <div class="service-icon">
             <i class="fas fa-home"></i>
         </div>
@@ -148,7 +146,7 @@
         <p>Pembangunan rumah tinggal yang nyaman dan berkualitas.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card" onclick="openMechanicalPopup()">
         <div class="service-icon">
             <i class="fas fa-tools"></i>
         </div>
@@ -156,7 +154,7 @@
         <p>Pekerjaan mekanikal dengan standar profesional.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card" onclick="openElectricalPopup()">
         <div class="service-icon">
             <i class="fas fa-bolt"></i>
         </div>
@@ -164,7 +162,7 @@
         <p>Instalasi listrik aman dan sesuai standar.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card" onclick="openFactoryPopup()">
         <div class="service-icon">
             <i class="fas fa-industry"></i>
         </div>
@@ -172,8 +170,8 @@
         <p>Pembangunan fasilitas industri dan pabrik.</p>
     </div>
 
-</div>
-        </div>
+    </div>
+    </div>
     </section>
 
     <!-- Portfolio Section -->
@@ -184,69 +182,114 @@
                 <p>Hasil karya terbaik yang telah kami wujudkan</p>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="img/draft 1.jpg" alt="gedung">
-                    <div class="portfolio-overlay">
-                        <h3>gedung</h3>
-                        <p>Pekerjaan curtain wall glass</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="img/draft 2.jpg" alt="aluminium">
-                    <div class="portfolio-overlay">
-                        <h3>aluminium</h3>
-                        <p>Pekerjaan kusen aluminium</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="img/draft 3.jpg" alt="interior">
-                    <div class="portfolio-overlay">
-                        <h3>interior</h3>
-                        <p>Pekerjaan Interior</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="img/draft 4.jpg" alt="gedung">
-                    <div class="portfolio-overlay">
-                        <h3>gedung</h3>
-                        <p>universitas jend, achmad yani yogyakarta</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="img/draft 6.jpg" alt="aluminium">
-                    <div class="portfolio-overlay">
-                        <h3>gedung</h3>
-                        <p>politeknik perindustrian cilegon</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="img/draft 7.jpg" alt="interior">
-                    <div class="portfolio-overlay">
-                        <h3>gedung </h3>
-                        <p>bbws citarum</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="img/draft 8.jpg" alt="gedung">
-                    <div class="portfolio-overlay">
-                        <h3>gedung</h3>
-                        <p>eka hospital bsd</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="img/draft 9.jpg" alt="aluminium">
-                    <div class="portfolio-overlay">
-                        <h3>gedung</h3>
-                        <p>masjid nurul falah</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="img/draft 10.jpg" alt="interior">
-                    <div class="portfolio-overlay">
-                        <h3>gedung</h3>
-                        <p>puri orchad apartement</p>
-                    </div>
-                </div>
+    <!-- Portfolio Item 1 -->
+    <div class="portfolio-item" 
+         data-images='["img/foto1 1.jpg", "img/foto1 2.jpg", "img/foto1 3.jpg", "img/foto1 4.jpg", "img/foto1 5.jpg"]' 
+         data-title="Curtain Wall Glass" 
+         data-desc="Pekerjaan curtain wall glass dengan material kualitas tinggi untuk gedung komersial modern.">
+        <img src="img/draft 1.jpg" alt="gedung">
+        <div class="portfolio-overlay">
+            <h3>STIE & MANAGEMENT - TRISAKTI</h3>
+            <p>Pekerjaan curtain wall glass</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Item 2 -->
+    <div class="portfolio-item" 
+         data-images='["img/foto2 1.jpg", "img/foto2 2.jpg", "img/foto2 3.jpg", "img/foto2 4.jpg", "img/foto2 5.jpg"]' 
+         data-title="Kopi Nako" 
+         data-desc="Jl. Abdul Muis No.20,Gambir, Jakarta Pusat.">
+        <img src="img/draft 15.jpg" alt="aluminium">
+        <div class="portfolio-overlay">
+            <h3>Kopi Nako</h3>
+            <p>Jl. Abdul Muis No.20,Gambir, Jakarta Pusat.</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Item 3 -->
+    <div class="portfolio-item" 
+         data-images='["img/foto3 1.jpg", "img/foto3 2.jpg", "img/foto3 3.jpg", "img/foto3 4.jpg", "img/foto3 5.jpg"]' 
+         data-title="RS Medika" 
+         data-desc="Permata Hijau.">
+        <img src="img/draft 16.jpg" alt="interior">
+        <div class="portfolio-overlay">
+            <h3>RS Medika</h3>
+            <p>Permata Hijau</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Item 4 -->
+    <div class="portfolio-item" 
+         data-images='["img/foto4 1.jpg", "img/foto4 2.jpg", "img/foto4 3.jpg", "img/foto4 4.jpg", "img/foto4 5.jpg"]' 
+         data-title="Universitas Jend. Achmad Yani" 
+         data-desc="Pembangunan fasilitas universitas dengan standar konstruksi tinggi di Yogyakarta.">
+        <img src="img/draft 4.jpg" alt="gedung">
+        <div class="portfolio-overlay">
+            <h3>Universitas</h3>
+            <p>universitas jend, achmad yani yogyakarta</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Item 5 -->
+    <div class="portfolio-item" 
+         data-images='["img/foto5 1.jpg", "img/foto5 2.jpg", "img/foto5 3.jpg", "img/foto5 4.jpg", "img/foto5 5.jpg"]' 
+         data-title="Politeknik Perindustrian Cilegon" 
+         data-desc="Konstruksi bangunan politeknik dengan spesifikasi teknis industri.">
+        <img src="img/draft 6.jpg" alt="aluminium">
+        <div class="portfolio-overlay">
+            <h3>Politeknik Cilegon</h3>
+            <p>politeknik perindustrian cilegon</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Item 6 -->
+    <div class="portfolio-item" 
+         data-images='["img/foto6 1.jpg", "img/foto6 2.jpg", "img/foto6 3.jpg", "img/foto6 4.jpg", "img/foto6 5.jpg"]' 
+         data-title="BBWS Citarum" 
+         data-desc="Pekerjaan konstruksi untuk Balai Besar Wilayah Sungai Citarum.">
+        <img src="img/draft 7.jpg" alt="interior">
+        <div class="portfolio-overlay">
+            <h3>BBWS Citarum</h3>
+            <p>bbws citarum</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Item 7 -->
+    <div class="portfolio-item" 
+         data-images='["img/foto7 1.jpg", "img/foto7 2.jpg", "img/foto7 3.jpg", "img/foto7 4.jpg", "img/foto7 5.jpg"]' 
+         data-title="Eka Hospital BSD" 
+         data-desc="Pengerjaan fasad rumah sakit Eka Hospital di BSD City.">
+        <img src="img/draft 8.jpg" alt="gedung">
+        <div class="portfolio-overlay">
+            <h3>Eka Hospital BSD</h3>
+            <p>eka hospital bsd</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Item 8 -->
+    <div class="portfolio-item" 
+         data-images='["img/foto8 1.jpg", "img/foto8 2.jpg", "img/foto8 3.jpg", "img/foto8 4.jpg", "img/foto8 5.jpg"]' 
+         data-title="Masjid Nurul Falah" 
+         data-desc="Pengerjaan fasad masjid dengan detail arsitektur islami yang indah.">
+        <img src="img/draft 9.jpg" alt="aluminium">
+        <div class="portfolio-overlay">
+            <h3>Masjid Nurul Falah</h3>
+            <p>masjid nurul falah</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Item 9 -->
+    <div class="portfolio-item" 
+         data-images='["img/foto9 1.jpg", "img/foto9 2.jpg", "img/foto9 3.jpg", "img/foto9 4.jpg", "img/foto9 5.jpg"]' 
+         data-title="Puri Orchard Apartemen" 
+         data-desc="Pengerjaan eksterior apartemen Puri Orchard dengan standar hunian premium.">
+        <img src="img/draft 10.jpg" alt="interior">
+        <div class="portfolio-overlay">
+            <h3>Puri Orchard</h3>
+            <p>puri orchad apartement</p>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -296,8 +339,7 @@
                         width="100%" 
                         height="300" 
                         style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
+                        allowfullscreen="" >
                     </iframe>
                 </div>
                 
@@ -313,12 +355,9 @@
                     <div class="logo">
                         <img src="img/logobaru.png" alt="Logo">
                     </div>
-                    <p>Transformasi digital untuk masa depan yang lebih baik.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://web.facebook.com/p/PT-Cipta-Nuansa-Prima-100071852890897/?_rdc=1&_rdr#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/ciptanuansa.prima/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -333,15 +372,17 @@
                 <div class="footer-section">
                     <h4>Layanan</h4>
                     <ul>
-                        <li><a href="#">building</a></li>
-                        <li><a href="#">interior</a></li>
-                        <li><a href="#">residence</a></li>
-                        <li><a href="#">mechanical</a></li>
-                        <li><a href="#">electrical</a></li>
-                        <li><a href="#">factory</a></li>
+                        <li><a href="#services">building</a></li>
+                        <li><a href="#services">interior</a></li>
+                        <li><a href="#services">residence</a></li>
+                        <li><a href="#services">mechanical</a></li>
+                        <li><a href="#services">electrical</a></li>
+                        <li><a href="#services">factory</a></li>
                     </ul>
                 </div>
             </div>
+
+
             <div class="footer-bottom">
                 <p>&copy; 2026 PT. Cipta Nuansa Prima. All rights reserved.</p>
             </div>
@@ -378,42 +419,483 @@
             navMenu.classList.toggle('active');
         });
 
-        // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Terima kasih! Pesan Anda telah dikirim.');
-            this.reset();
+        // untuk popup //
+function openBuildingPopup() {
+  document.getElementById("BuildingPopup").style.display = "block";
+}
+function openInteriorPopup() {
+  document.getElementById("interiorPopup").style.display = "block";
+}
+function openResidencePopup() {
+  document.getElementById("ResidencePopup").style.display = "block";
+}
+function openMechanicalPopup() {
+  document.getElementById("MechanicalPopup").style.display = "block";
+}
+function openElectricalPopup() {
+  document.getElementById("ElectricalPopup").style.display = "block";
+}
+function openFactoryPopup() {
+  document.getElementById("FactoryPopup").style.display = "block";
+}
+
+// close popup //
+function closeBuildingPopup() {
+  document.getElementById("BuildingPopup").style.display = "none";
+}
+function closeInteriorPopup() {
+  document.getElementById("interiorPopup").style.display = "none";
+}
+function closeResidencePopup() {
+  document.getElementById("ResidencePopup").style.display = "none";
+}
+function closeMechanicalPopup() {
+  document.getElementById("MechanicalPopup").style.display = "none";
+}
+function closeElectricalPopup() {
+  document.getElementById("ElectricalPopup").style.display = "none";
+}
+function closeFactoryPopup() {
+  document.getElementById("FactoryPopup").style.display = "none";
+}
+
+// Klik luar popup = close
+window.onclick = function(event) {
+    let buildingPopup = document.getElementById("BuildingPopup");
+    let interiorPopup = document.getElementById("interiorPopup");
+    let residencePopup = document.getElementById("ResidencePopup");
+    let MechanicalPopup = document.getElementById("MechanicalPopup");
+    let ElectricalPopup = document.getElementById("ElectricalPopup");
+    let FactoryPopup = document.getElementById("FactoryPopup");
+
+  if (event.target == buildingPopup) {
+    buildingPopup.style.display = "none";
+  }
+
+  if (event.target == interiorPopup) {
+    interiorPopup.style.display = "none";
+  }
+  if (event.target == ResidencePopup) {
+    ResidencePopup.style.display = "none";
+  }
+  if (event.target == MechanicalPopup) {
+    MechanicalPopup.style.display = "none";
+  }
+  if (event.target == ElectricalPopup) {
+    ElectricalPopup.style.display = "none";
+  }
+  if (event.target == FactoryPopup) {
+    FactoryPopup.style.display = "none";
+  }
+}
+
+// Portfolio Modal Variables
+let currentSlide = 0;
+let totalSlides = 0;
+
+// Portfolio Modal Functions
+function openPortfolioModal(images, title, desc) {
+    currentSlide = 0;
+    totalSlides = images.length;
+    
+    // Set title and description
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalDesc').textContent = desc;
+    
+    // Generate slider images
+    const sliderWrapper = document.getElementById('sliderWrapper');
+    sliderWrapper.innerHTML = '';
+    
+    images.forEach(image => {
+        const img = document.createElement('img');
+        img.src = image;
+        img.className = 'slider-image';
+        img.alt = title;
+        img.loading = 'lazy';
+        sliderWrapper.appendChild(img);
+    });
+    
+    // Generate dots
+    generateDots();
+    
+    // Show modal
+    document.getElementById('portfolioModal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    
+    updateSlider();
+}
+
+function closePortfolioModal() {
+    document.getElementById('portfolioModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function changeSlide(direction) {
+    currentSlide += direction;
+    if (currentSlide >= totalSlides) currentSlide = 0;
+    if (currentSlide < 0) currentSlide = totalSlides - 1;
+    updateSlider();
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+}
+
+function updateSlider() {
+    const sliderWrapper = document.getElementById('sliderWrapper');
+    sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Update active dot
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+}
+
+function generateDots() {
+    const dotsContainer = document.getElementById('sliderDots');
+    dotsContainer.innerHTML = '';
+    
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'dot';
+        dot.onclick = () => goToSlide(i);
+        if (i === 0) dot.classList.add('active');
+        dotsContainer.appendChild(dot);
+    }
+}
+
+// Event Listeners
+document.addEventListener('DOMContentLoaded', function() {
+    // Portfolio items click
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', function() {
+            const images = JSON.parse(this.dataset.images);
+            const title = this.dataset.title;
+            const desc = this.dataset.desc;
+            openPortfolioModal(images, title, desc);
         });
-
-const modal = document.getElementById("imageModal");
-const modalImg = document.getElementById("modalImg");
-const captionText = document.getElementById("modalCaption");
-const closeBtn = document.querySelector(".close");
-
-document.querySelectorAll(".portfolio-item").forEach(item => {
-    item.addEventListener("click", function () {
-        const img = this.querySelector("img");
-        const title = this.querySelector("h3").innerText;
-        const desc = this.querySelector("p").innerText;
-
-        modal.style.display = "block";
-        modalImg.src = img.src;
-        captionText.innerHTML = `<strong>${title}</strong><br>${desc}`;
+    });
+    
+    // Close modal on outside click
+    document.getElementById('portfolioModal').addEventListener('click', function(e) {
+        if (e.target === this) closePortfolioModal();
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (document.getElementById('portfolioModal').style.display === 'block') {
+            switch(e.key) {
+                case 'Escape': closePortfolioModal(); break;
+                case 'ArrowLeft': changeSlide(-1); break;
+                case 'ArrowRight': changeSlide(1); break;
+            }
+        }
     });
 });
 
-// tombol close
-closeBtn.onclick = function () {
-    modal.style.display = "none";
-};
 
-// klik luar gambar = close
-modal.onclick = function (e) {
-    if (e.target === modal) {
-        modal.style.display = "none";
-    }
-};
-
-    </script>
+</script>
+<!-- Portfolio Popup Modal -->
+<div id="portfolioModal" class="portfolio-modal">
+    <span class="modal-close" onclick="closePortfolioModal()">&times;</span>
+    
+    <div class="modal-content">
+        <!-- Image Slider -->
+        <div class="slider-container">
+            <div class="slider-wrapper" id="sliderWrapper">
+                <!-- Images akan di-generate oleh JavaScript -->
+            </div>
+            <button class="slider-btn prev-btn" onclick="changeSlide(-1)">❮</button>
+            <button class="slider-btn next-btn" onclick="changeSlide(1)">❯</button>
+        </div>
+        
+        <!-- Dots Navigation -->
+        <div class="slider-dots" id="sliderDots"></div>
+        
+        <!-- Info Section -->
+        <div class="modal-info">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+            <div class="modal-actions">
+                <a href="https://wa.me/6281211832929?text=Saya%20tertarik%20dengan%20produk%20Anda,%20apakah%20saya%20bisa%20bertanya%20lebih%20lanjut?" class="btn btn-primary">Hubungi Kami</a>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
+
+
 </html>
+
+<!--building-->
+<div id="BuildingPopup" class="popup">
+  <div class="popup-content">
+
+  <span class="close" onclick="closeBuildingPopup()">&times;</span>
+
+  <div class="popup-container">
+
+    <!-- KIRI (TEXT) -->
+    <div class="popup-text">
+  <h2>Building Construction</h2>
+  <p>
+    Kami menyediakan layanan konstruksi bangunan profesional mulai dari
+    perencanaan, pembangunan, hingga finishing. Dengan pengalaman dan
+    tenaga ahli, kami memastikan setiap proyek berjalan tepat waktu
+    dengan kualitas terbaik.
+  </p>
+
+  <h3>Layanan:</h3>
+  <ul>
+    <li>Pembangunan Rumah Tinggal</li>
+    <li>Pembangunan Gedung & Ruko</li>
+    <li>Renovasi & Perbaikan Bangunan</li>
+    <li>Desain & Perencanaan Konstruksi</li>
+  </ul>
+
+  <h3>Keunggulan:</h3>
+  <ul>
+    <li>Kualitas bangunan terjamin</li>
+    <li>Material standar terbaik</li>
+    <li>Tim profesional & berpengalaman</li>
+    <li>Pengerjaan tepat waktu</li>
+  </ul>
+  <a href="https://wa.me/6281211832929?text=Saya%20tertarik%20dengan%20produk%20Anda,%20apakah%20saya%20bisa%20bertanya%20lebih%20lanjut?" class="btn btn-primary">Konsultasi Sekarang</a>
+</div>
+
+    <!-- KANAN (IMAGE) -->
+    <div class="popup-image">
+      <img src="img/draft 4.jpg" alt="Interior">
+    </div>
+  </div>
+</div>
+</div>
+<!--interior-->
+<div id="interiorPopup" class="popup">
+  <div class="popup-content">
+
+  <span class="close" onclick="closeInteriorPopup()">&times;</span>
+
+  <div class="popup-container">
+
+    <!-- KIRI (TEXT) -->
+    <div class="popup-text">
+      <h2>Interior Design & Build</h2>
+      <p>
+        Kami menyediakan layanan desain interior modern dan fungsional,
+        mulai dari konsep hingga realisasi.
+      </p>
+
+      <h3>Layanan:</h3>
+      <ul>
+        <li>Interior Rumah</li>
+        <li>Interior Kantor & Cafe</li>
+        <li>Custom Furniture</li>
+        <li>Renovasi Interior</li>
+      </ul>
+
+      <h3>Keunggulan:</h3>
+      <ul>
+        <li>Desain modern & elegan</li>
+        <li>Material berkualitas</li>
+        <li>Tim profesional</li>
+        <li>Harga kompetitif</li>
+      </ul>
+
+      <a href="https://wa.me/6281211832929?text=Saya%20tertarik%20dengan%20produk%20Anda,%20apakah%20saya%20bisa%20bertanya%20lebih%20lanjut?" class="btn btn-primary">Konsultasi Sekarang</a>
+    </div>
+
+    <!-- KANAN (IMAGE) -->
+    <div class="popup-image">
+      <img src="img/draft 3.jpg" alt="Interior">
+    </div>
+
+  </div>
+
+</div>
+</div>
+<!--Residence-->
+<div id="ResidencePopup" class="popup">
+  <div class="popup-content">
+
+  <span class="close" onclick="closeResidencePopup()">&times;</span>
+
+  <div class="popup-container">
+
+    <!-- KIRI (TEXT) -->
+    <div class="popup-text">
+  <h2>Residential Development</h2>
+  <p>
+    Kami menyediakan layanan pembangunan hunian yang nyaman, modern, dan berkualitas,
+    mulai dari perencanaan hingga pembangunan selesai. Kami membantu mewujudkan
+    rumah impian Anda dengan desain yang fungsional dan estetis.
+  </p>
+
+  <h3>Layanan:</h3>
+  <ul>
+    <li>Pembangunan Rumah Tinggal</li>
+    <li>Desain Rumah Modern & Minimalis</li>
+    <li>Renovasi & Perluasan Rumah</li>
+    <li>Perumahan & Cluster</li>
+  </ul>
+
+  <h3>Keunggulan:</h3>
+  <ul>
+    <li>Desain sesuai kebutuhan klien</li>
+    <li>Konstruksi kuat & tahan lama</li>
+    <li>Tim profesional & berpengalaman</li>
+    <li>Harga transparan & kompetitif</li>
+  </ul>
+
+  <a href="https://wa.me/6281211832929?text=Saya%20tertarik%20dengan%20produk%20Anda,%20apakah%20saya%20bisa%20bertanya%20lebih%20lanjut?" class="btn btn-primary">Konsultasi Sekarang</a>
+</div>
+
+    <!-- KANAN (IMAGE) -->
+    <div class="popup-image">
+      <img src="img/draft 12.jpg" alt="Interior">
+    </div>
+
+  </div>
+
+</div>
+</div>
+<!--Mechanical-->
+<div id="MechanicalPopup" class="popup">
+  <div class="popup-content">
+
+  <span class="close" onclick="closeMechanicalPopup()">&times;</span>
+
+  <div class="popup-container">
+
+    <!-- KIRI (TEXT) -->
+    <div class="popup-text">
+  <h2>Mechanical Services</h2>
+  <p>
+    Kami menyediakan layanan pekerjaan mekanikal untuk berbagai kebutuhan
+    bangunan dan industri, mulai dari instalasi hingga perawatan sistem
+    mekanik dengan standar kualitas tinggi dan tenaga profesional.
+  </p>
+
+  <h3>Layanan:</h3>
+  <ul>
+    <li>Instalasi Sistem HVAC (AC & Ventilasi)</li>
+    <li>Instalasi Mesin & Peralatan Industri</li>
+    <li>Sistem Plumbing & Pompa</li>
+    <li>Maintenance & Perbaikan Mekanikal</li>
+  </ul>
+
+  <h3>Keunggulan:</h3>
+  <ul>
+    <li>Standar kerja profesional & aman</li>
+    <li>Teknisi berpengalaman</li>
+    <li>Peralatan modern</li>
+    <li>Pengerjaan cepat & tepat</li>
+  </ul>
+
+  <a href="https://wa.me/6281211832929?text=Saya%20tertarik%20dengan%20produk%20Anda,%20apakah%20saya%20bisa%20bertanya%20lebih%20lanjut?" class="btn btn-primary">Konsultasi Sekarang</a>
+</div>
+
+    <!-- KANAN (IMAGE) -->
+    <div class="popup-image">
+      <img src="img/draft 11.jpg" alt="Interior">
+    </div>
+
+  </div>
+
+</div>
+</div>
+<!--Electrical-->
+<div id="ElectricalPopup" class="popup">
+  <div class="popup-content">
+
+  <span class="close" onclick="closeElectricalPopup()">&times;</span>
+
+  <div class="popup-container">
+
+    <!-- KIRI (TEXT) -->
+    <div class="popup-text">
+  <h2>Electrical Services</h2>
+  <p>
+    Kami menyediakan layanan instalasi dan pemeliharaan sistem kelistrikan
+    untuk kebutuhan bangunan dan industri. Dengan standar keamanan tinggi
+    dan tenaga ahli profesional, kami memastikan sistem listrik berjalan
+    dengan aman, efisien, dan handal.
+  </p>
+
+  <h3>Layanan:</h3>
+  <ul>
+    <li>Instalasi Listrik Bangunan</li>
+    <li>Panel Listrik & Distribusi</li>
+    <li>Pemasangan Penerangan (Lighting)</li>
+    <li>Maintenance & Perbaikan Sistem Listrik</li>
+  </ul>
+
+  <h3>Keunggulan:</h3>
+  <ul>
+    <li>Standar keamanan tinggi</li>
+    <li>Teknisi bersertifikat & berpengalaman</li>
+    <li>Instalasi rapi & sesuai standar</li>
+    <li>Pelayanan cepat & responsif</li>
+  </ul>
+
+  <a href="https://wa.me/6281211832929?text=Saya%20tertarik%20dengan%20produk%20Anda,%20apakah%20saya%20bisa%20bertanya%20lebih%20lanjut?" class="btn btn-primary">Konsultasi Sekarang</a>
+</div>
+
+    <!-- KANAN (IMAGE) -->
+    <div class="popup-image">
+      <img src="img/draft 13.jpg" alt="Interior">
+    </div>
+
+  </div>
+
+</div>
+</div>
+<!--Factory-->
+<div id="FactoryPopup" class="popup">
+  <div class="popup-content">
+
+  <span class="close" onclick="closeFactoryPopup()">&times;</span>
+
+  <div class="popup-container">
+
+    <!-- KIRI (TEXT) -->
+    <div class="popup-text">
+  <h2>Factory & Industrial Services</h2>
+  <p>
+    Kami menyediakan layanan pembangunan dan pengembangan fasilitas pabrik
+    serta industri dengan standar kualitas tinggi. Mulai dari perencanaan,
+    konstruksi, hingga instalasi sistem pendukung, kami memastikan operasional
+    berjalan efisien dan optimal.
+  </p>
+
+  <h3>Layanan:</h3>
+  <ul>
+    <li>Pembangunan Gedung Pabrik</li>
+    <li>Instalasi Mesin & Produksi</li>
+    <li>Sistem Utilitas Industri</li>
+    <li>Renovasi & Pengembangan Fasilitas</li>
+  </ul>
+
+  <h3>Keunggulan:</h3>
+  <ul>
+    <li>Standar industri & keselamatan tinggi</li>
+    <li>Tim profesional & berpengalaman</li>
+    <li>Perencanaan efisien & terstruktur</li>
+    <li>Pengerjaan tepat waktu</li>
+  </ul>
+
+  <a href="https://wa.me/6281211832929?text=Saya%20tertarik%20dengan%20produk%20Anda,%20apakah%20saya%20bisa%20bertanya%20lebih%20lanjut?" class="btn btn-primary">Konsultasi Sekarang</a>
+</div>
+
+    <!-- KANAN (IMAGE) -->
+    <div class="popup-image">
+      <img src="img/draft 14.jpg" alt="Interior">
+    </div>
+
+  </div>
+
+</div>
+</div>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Interior Design Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 10%;
+      background: #222;
+      color: #fff;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    /* HERO */
+    .hero {
+      background: url('https://via.placeholder.com/1200x500') center/cover no-repeat;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      background: rgba(0,0,0,0.5);
+      padding: 15px 25px;
+      border-radius: 5px;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 60px 10%;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card i {
+      font-size: 30px;
+      color: #8b5e3c;
+      margin-bottom: 10px;
+    }
+
+    /* PROCESS */
+    .process {
+      background: #f1f1f1;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .step i {
+      font-size: 28px;
+      color: #8b5e3c;
+      margin-bottom: 10px;
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .portfolio img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* CTA */
+    .cta {
+      background: #8b5e3c;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: white;
+      color: #8b5e3c;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.popup-content {
+  background: white;
+  width: 90%;
+  max-width: 600px;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #8b5e3c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.popup-content {
+  background: white;
+  width: 90%;
+  max-width: 900px;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+/* CONTAINER 2 KOLOM */
+.popup-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/* TEXT */
+.popup-text {
+  flex: 1;
+}
+
+/* IMAGE */
+.popup-image {
+  flex: 1;
+  text-align: center;
+}
+
+.popup-image img {
+  width: 100%;
+  max-width: 350px;
+  border: 3px solid #000;
+}
+
+/* RESPONSIVE (HP) */
+@media (max-width: 768px) {
+  .popup-container {
+    flex-direction: column;
+  }
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+  </style>
+</head>
+
+<body>
+
+
+  <div class="service-card" onclick="openInteriorPopup()">
+    <div class="service-icon">
+        <i class="fas fa-couch"></i>
+    </div>
+    <h3>Interior</h3>
+    <p>Desain interior modern dan elegan.</p>
+</div>
+
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div><strong>Company Anda</strong></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Interior Design & Build</h1>
+</div>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2>Tentang Layanan Interior</h2>
+  <p class="about">
+    Kami menghadirkan solusi desain interior yang modern, elegan, dan fungsional.
+    Mulai dari konsep hingga realisasi, kami membantu menciptakan ruang yang nyaman
+    dan sesuai dengan karakter serta kebutuhan Anda.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <h2>Layanan Interior</h2>
+  <div class="services">
+
+    <div class="card">
+      <i class="fas fa-couch"></i>
+      <h3>Interior Rumah</h3>
+      <p>Desain interior rumah yang nyaman dan estetis.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-store"></i>
+      <h3>Interior Komersial</h3>
+      <p>Desain untuk kantor, cafe, dan ruang bisnis.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-pencil-ruler"></i>
+      <h3>Custom Furniture</h3>
+      <p>Pembuatan furniture sesuai kebutuhan dan desain.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-paint-roller"></i>
+      <h3>Renovasi Interior</h3>
+      <p>Perbaikan dan upgrade tampilan interior lama.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process">
+  <h2>Proses Kerja</h2>
+  <div class="steps">
+
+    <div class="step">
+      <i class="fas fa-comments"></i>
+      <h4>Konsultasi</h4>
+      <p>Diskusi konsep dan kebutuhan desain Anda.</p>
+    </div>
+
+    <div class="step">
+      <i class="fas fa-pencil-ruler"></i>
+      <h4>Desain</h4>
+      <p>Pembuatan konsep visual dan layout ruangan.</p>
+    </div>
+
+    <div class="step">
+      <i class="fas fa-hammer"></i>
+      <h4>Produksi</h4>
+      <p>Pengerjaan interior dan furniture.</p>
+    </div>
+
+    <div class="step">
+      <i class="fas fa-check-circle"></i>
+      <h4>Finishing</h4>
+      <p>Penyelesaian dan penyerahan hasil akhir.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section">
+  <h2>Portfolio Interior</h2>
+  <div class="portfolio">
+    <img src="https://via.placeholder.com/400x250">
+    <img src="https://via.placeholder.com/400x250">
+    <img src="https://via.placeholder.com/400x250">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ingin Interior Impian Anda?</h2>
+  <p>Konsultasikan sekarang dan wujudkan ruang terbaik Anda.</p>
+  <a href="#">Hubungi Kami</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Company Anda. All rights reserved.</p>
+</footer>
+
+</body>
+
+<!--building-->
+<div id="BuildingPopup" class="popup">
+  <div class="popup-content">
+
+  <span class="close" onclick="closeBuildingPopup()">&times;</span>
+
+  <div class="popup-container">
+
+    <!-- KIRI (TEXT) -->
+    <div class="popup-text">
+      <h2>Interior Design & Build</h2>
+      <p>
+        Kami menyediakan layanan desain interior modern dan fungsional,
+        mulai dari konsep hingga realisasi.
+      </p>
+
+      <h3>Layanan:</h3>
+      <ul>
+        <li>Interior Rumah</li>
+        <li>Interior Kantor & Cafe</li>
+        <li>Custom Furniture</li>
+        <li>Renovasi Interior</li>
+      </ul>
+
+      <h3>Keunggulan:</h3>
+      <ul>
+        <li>Desain modern & elegan</li>
+        <li>Material berkualitas</li>
+        <li>Tim profesional</li>
+        <li>Harga kompetitif</li>
+      </ul>
+
+      <a href="#" class="btn">Konsultasi Sekarang</a>
+    </div>
+
+    <!-- KANAN (IMAGE) -->
+    <div class="popup-image">
+      <img src="img/draft 3.jpg" alt="Interior">
+    </div>
+  </div>
+</div>
+</div>
+
+<!--Interior-->
+<div id="interiorPopup" class="popup">
+  <div class="popup-content">
+
+  <span class="close" onclick="closeInteriorPopup()">&times;</span>
+
+  <div class="popup-container">
+
+    <!-- KIRI (TEXT) -->
+    <div class="popup-text">
+      <h2>Interior Design & Build</h2>
+      <p>
+        Kami menyediakan layanan desain interior modern dan fungsional,
+        mulai dari konsep hingga realisasi.
+      </p>
+
+      <h3>Layanan:</h3>
+      <ul>
+        <li>Interior Rumah</li>
+        <li>Interior Kantor & Cafe</li>
+        <li>Custom Furniture</li>
+        <li>Renovasi Interior</li>
+      </ul>
+
+      <h3>Keunggulan:</h3>
+      <ul>
+        <li>Desain modern & elegan</li>
+        <li>Material berkualitas</li>
+        <li>Tim profesional</li>
+        <li>Harga kompetitif</li>
+      </ul>
+
+      <a href="#" class="btn">Konsultasi Sekarang</a>
+    </div>
+
+    <!-- KANAN (IMAGE) -->
+    <div class="popup-image">
+      <img src="img/draft 3.jpg" alt="Interior">
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+function openBuildingPopup() {
+  document.getElementById("interiorPopup").style.display = "block";
+}
+function openInteriorPopup() {
+  document.getElementById("interiorPopup").style.display = "block";
+}
+
+function closeBuildingPopup() {
+  document.getElementById("interiorPopup").style.display = "none";
+}
+function closeInteriorPopup() {
+  document.getElementById("interiorPopup").style.display = "none";
+}
+
+// Klik luar popup = close
+window.onclick = function(event) {
+  let popup = document.getElementById("interiorPopup");
+  if (event.target == popup) {
+    popup.style.display = "none";
+  }
+}
+</script>
+
+</html>
